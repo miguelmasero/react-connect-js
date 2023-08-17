@@ -13,16 +13,28 @@ ConnectComponentsContext.displayName = 'ConnectComponents';
 export const ConnectComponentsProvider = ({
   connectInstance,
   children,
+  initParams,
 }: {
   connectInstance:
     | connectJs.StripeConnectInstance
     | Promise<connectJs.StripeConnectInstance>
     | null;
   children: any;
+  initParams?: connectJs.IStripeConnectInitParams;
 }): JSX.Element => {
   const [resolvedConnectInstance, setResolvedConnectInstance] =
     React.useState<connectJs.StripeConnectInstance | null>(null);
 
+  if (connectInstance === null && !initParams) {
+    throw new Error();
+  }
+
+  if (connectInstance === null && initParams) {
+    async () => {
+      const connectWrapper = await connectJs.loadConnect();
+      connectInstance = await connectWrapper.initialize(initParams);
+    };
+  }
   React.useEffect(() => {
     (async () => {
       setResolvedConnectInstance(await connectInstance);
