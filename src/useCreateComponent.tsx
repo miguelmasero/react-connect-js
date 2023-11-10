@@ -9,7 +9,7 @@ export const useCreateComponent = (
   const [component, setComponent] = React.useState<HTMLElement | null>(null);
   const {connectInstance} = useConnectComponents();
   const wrapperDivRef = React.useRef<HTMLDivElement | null>(null);
-  const wrapper = <div ref={wrapperDivRef}></div>;
+  const wrapper = <div ref={wrapperDivRef} style={{width: '100%'}}></div>;
 
   React.useLayoutEffect(() => {
     if (wrapperDivRef.current !== null && component === null) {
