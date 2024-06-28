@@ -100,8 +100,7 @@ export const ConnectNotificationBanner = ({
   onNotificationsChange,
 }: {
   collectionOptions?: CollectionOptions;
-  onNotificationsChange?: () => void;
-}): JSX.Element | null => {
+  onNotificationsChange?: (response?: {total?: number, actionRequired?: number}) => void;}): JSX.Element | null => {
   const {wrapper, component: notificationBanner} = useCreateComponent('notification-banner');
 
   useUpdateWithSetter(notificationBanner, collectionOptions, (comp, val) =>
