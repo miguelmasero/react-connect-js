@@ -25,7 +25,7 @@ First, install React Connect.js and
 [Connect.js](https://github.com/stripe/connect-js).
 
 ```sh
-npm install @stripe/react-connect-js @stripe/connect-js
+yarn add @stripe/react-connect-js @stripe/connect-js
 ```
 
 You have to wrap your components with `ConnectComponentsProvider` in order to

@@ -1521,10 +1521,15 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@stripe/connect-js@3.3.20":
+"@stripe/connect-js@^3.3.20":
   version "3.3.20"
   resolved "https://registry.yarnpkg.com/@stripe/connect-js/-/connect-js-3.3.20.tgz#ffa508f62effcadf7e0774ca222dbc9d60704141"
   integrity sha512-4GingsjdQDJomIMAmTWFJSBifLygc5xWCcYzdcL5nYiePBuHEfYwFKKq7tOO1SIR2jsuHpn6R18xKVijToblWQ==
+
+"@stripe/react-connect-js@^3.3.20":
+  version "3.3.20"
+  resolved "https://registry.yarnpkg.com/@stripe/react-connect-js/-/react-connect-js-3.3.20.tgz#3fb0373a18a62c253549118b45267060145d08c1"
+  integrity sha512-OYRhW7Zm7zjsT5cSAa5nxnW202Rf2W4sUpKvdCbL5qRs/J9DvMYehI/pLpMNwgkJnVieWDXel2jkcRUBiHBnZg==
 
 "@tootallnate/once@2":
   version "2.0.0"
